@@ -5,28 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
 
-  <!-- the style.css import-->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- The java script import-->
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <header>
-    <h1>Game Dev Portfolio</h1>
-      <p>Your description</p>
-  </header>
+<!-- 
+       HERO SECTION
+       Background image fades out as you scroll past it.
+       Replace the `background-image` URL in style.css with your own image.
+-->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <!--
+           Replace "Firstname" and "Lastname" with your actual name.
+           "Firstname" gets the purple accent color.
+      -->
+      <h1 class="hero__name">
+        <span class="hero__name--accent">Benjamin</span>
+        <span class="hero__name--last">Nguyen</span>
+      </h1>
+      
 
-  <main>
-    <div class="about-content">
-    <h2>About Me</h2>
-    <p>Your bio here</p>
+      <!-- 
+           Replace this with your 1-2 sentence bio.
+      -->
+      <p class="hero__bio">Game Dev at University of California, Santa Cruz! A humble programmer that also does game design!</p>
     </div>
+  </section>
+
+  <!--
+       MAIN CONTENT
+       Scrolls over the hero, hiding it naturally.
+  -->
+  <main>
+
+    <section class="section">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>Your bio here</p>
+      </div>
+    </section>
+
   </main>
 
-</body>
-
-</body>
 </body>
 </html>

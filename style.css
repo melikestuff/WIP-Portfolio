@@ -1,55 +1,147 @@
+/* ---------------------------------------
+   CSS VARIABLES
+   Central place to update colors, fonts, and sizing.
+--------------------------------------- */
 :root {
-  --bg-primary: #0a0e27;        /* Main background */
-  --accent-primary: #00d9ff;    /* Primary accent color */
-  --accent-secondary: #7c3aed;  /* Secondary accent */
+  --bg-primary:        #0a0e27;
+  --bg-surface:        #020617;
+  --bg-raised:         #0f172a;
+  --accent-primary:    #00d9ff;
+  --accent-secondary:  #7c3aed;
+  --text-primary:      #e5e7eb;
+  --text-muted:        #94a3b8;
+  --border-subtle:     #1e293b;
+  --link-color:        #38bdf8;
+
+  --hero-height: 100vh;
+
+  --hero-overlay-opacity: 0.55;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
-}
-
-header {
-  padding: 3rem 1rem;
-  text-align: center;
-  background: #020617;
-  border-bottom: 1px solid #1e293b;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3.5rem;
-  letter-spacing: 2px;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  padding: 3rem 1rem;
-}
-
-.card {
-  background: #020617;
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  max-width: 500px;
-  width: 100%;
+  background: var(--bg-raised);
+  color: var(--text-primary);
 }
 
 p {
-  color: #94a3b8;
+  color: var(--text-muted);
+  line-height: 1.7;
 }
 
 a {
-  color: #38bdf8;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+
+/* ============================================================
+   How it works:
+   - `background-attachment: fixed` pins the image to the
+     viewport, so it stays put while the page scrolls — the
+     classic parallax effect.
+   - As the user scrolls, <main> slides up and covers the hero,
+     making the image naturally disappear without JS.
+   - The `.hero__overlay` div sits on top of the image and
+     tints it with the site's background color so the image
+     blends in rather than clashing.
+============================================================ */
+.hero {
+  position: relative;
+  height: var(--hero-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-image: url("IMG_0537.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-primary);
+  opacity: var(--hero-overlay-opacity);
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  padding: 0 4rem;
+  max-width: 600px;         
+  width: 100%;
+  align-self: center;
+}
+
+.hero__name {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  line-height: 1.1;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hero__name--accent {
+  color: #a78bfa;
+}
+
+.hero__bio {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 420px;
+  line-height: 1.65;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  background: var(--bg-raised);
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+.section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero__name--last {
+  color: #7dd3fc;
+}
+
+.card {
+  background: var(--bg-surface);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
 }
