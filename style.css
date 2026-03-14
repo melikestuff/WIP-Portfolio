@@ -46,6 +46,7 @@ a:hover {
 
 
 /* ============================================================
+   HERO SECTION
    How it works:
    - `background-attachment: fixed` pins the image to the
      viewport, so it stays put while the page scrolls — the
@@ -65,10 +66,12 @@ a:hover {
 
   background-image: url("IMG_0537.png");
 
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+  /* Parallax: image stays fixed while content scrolls */
   background-attachment: fixed;
 }
 
@@ -90,6 +93,7 @@ a:hover {
   align-self: center;
 }
 
+/* Name */
 .hero__name {
   margin: 0 0 1.25rem;
   font-size: clamp(2.8rem, 6vw, 5.5rem);
@@ -103,6 +107,11 @@ a:hover {
   color: #a78bfa;
 }
 
+.hero__name--last {
+  color: #7dd3fc;
+}
+
+/* Short bio */
 .hero__bio {
   font-size: clamp(1rem, 2vw, 1.25rem);
   color: var(--text-muted);
@@ -119,7 +128,6 @@ main {
   box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.6);
 }
 
-
 .section {
   max-width: 860px;
   margin: 0 auto;
@@ -132,10 +140,6 @@ main {
   color: var(--text-primary);
 }
 
-.hero__name--last {
-  color: #7dd3fc;
-}
-
 .card {
   background: var(--bg-surface);
   padding: 2rem 3rem;
@@ -144,4 +148,32 @@ main {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   max-width: 500px;
   width: 100%;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.85rem 1.5rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.topbar__link {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.topbar__link:hover {
+  color: #a78bfa;
+  text-decoration: none;
 }
