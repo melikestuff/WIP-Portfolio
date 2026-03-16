@@ -66,7 +66,6 @@ a:hover {
 
   background-image: url("IMG_0537.png");
 
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,7 +87,7 @@ a:hover {
   z-index: 1;
   text-align: left;
   padding: 0 4rem;
-  max-width: 600px;         
+  max-width: 600px;
   width: 100%;
   align-self: center;
 }
@@ -110,7 +109,6 @@ a:hover {
 .hero__name--last {
   color: #a78bfa;
 }
-
 /* Short bio */
 .hero__bio {
   font-size: clamp(1rem, 2vw, 1.25rem);
@@ -129,13 +127,14 @@ main {
 }
 
 .section {
-  max-width: 860px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 1.5rem;
+  font-size: 1.2rem;
 }
 
 .about-content h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
   color: var(--text-primary);
 }
@@ -162,11 +161,12 @@ main {
   padding: 0.85rem 1.5rem;
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border-subtle);
+  gap: 2rem;
 }
 
 .topbar__link {
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;
@@ -176,4 +176,63 @@ main {
 .topbar__link:hover {
   color: #a78bfa;
   text-decoration: none;
+}
+
+.section__heading {
+  font-size: 3rem;
+  margin: 0 0 2rem;
+  color: var(--text-primary);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+.game-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(167, 139, 250, 0.2);
+  border-color: #a78bfa;
+  text-decoration: none;
+}
+
+.game-card__title {
+  display: block;
+  padding: 0.85rem 1rem 0.6rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.game-card__image {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.game-card__body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.game-card__desc {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.55;
 }

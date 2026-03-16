@@ -3,20 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Benjamin Nguyen's portfolio</title>
 
   <link rel="stylesheet" href="style.css" />
 
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <!-- Top bar: Socials and stuff-->
   <header class="topbar">
     <a href="https://www.linkedin.com/in/benjamin-nguyen-9878281b6/" class="topbar__link" target="_blank" rel="noopener noreferrer">
       Linkedin
+    <a href="https://melikestuff.itch.io/" class="topbar__link" target="_blank" rel="noopener noreferrer">
+      Itch.io
+
     </a>
-    
   </header>
 
+  <!-- Hero background-->
   <section class="hero">
     <div class="hero__overlay"></div>
     <div class="hero__content">
@@ -31,10 +36,66 @@
 
   <main>
 
+    <!-- ABT me section below herov-->
     <section class="section">
       <div class="about-content">
-        <h2>About Me</h2>
-        <p>Your bio here</p>
+        <h2>About Me</h2> 
+        <p>Hi i'm a programmer with specialtys in UI and gameplay Programmer. As a student I wear multiple hats in game dev, notably
+          as a producer and designer. I came into game dev with a childhood passion and a desire to make my dream games a reality.
+        </p>
+      </div>
+    </section>
+
+    <!-- Game display (cards)-->
+    <section class="section">
+      <h2 class="section__heading">Games I've worked on</h2>
+
+      <div class="games-grid">
+
+        <!-- Card 1: Well Witches -->
+        <a href="https://game-design-art-collab.itch.io/well-witches" class="game-card" target="_blank" rel="noopener noreferrer">
+          <span class="game-card__title">Well Witches</span>
+          <img src="https://img.itch.zone/aW1nLzIxNTIxMzQyLnBuZw==/315x250%23c/dXtw4P.png" alt="GAME TITLE cover" class="game-card__image"/>
+          <div class="game-card__body">
+            <p class="game-card__desc">Worked as a Programming Producer for a club's game project. 
+              Managed teams of up to 30 programmers whilst communicating on a broader scale to 
+              other departs totaling to a team of 100 people!</p>
+          </div>
+        </a>
+
+        <!-- Card 2: Light Box -->
+        <a href="https://aliens4th.itch.io/lightbox" class="game-card" target="_blank" rel="noopener noreferrer">
+          <span class="game-card__title">Light Box</span>
+          <img src="https://img.itch.zone/aW1nLzIxODA2NzQzLnBuZw==/315x250%23c/KxPzMG.png" alt="GAME TITLE cover" class="game-card__image" style="object-position: top;"/>
+          <div class="game-card__body">
+            <p class="game-card__desc">A game jam prototype that was made in Godot! Made the game whilst learning Godot for the 1st time.</p>
+          </div>
+        </a>
+
+        <!-- Card 3: Slime Diver -->
+        <a href="https://melikestuff.itch.io/slime-diver" class="game-card" target="_blank" rel="noopener noreferrer">
+          <span class="game-card__title">Slime Diver</span>
+          <img src="https://img.itch.zone/aW1nLzI0Mzc2MTcyLnBuZw==/315x250%23c/Toe8fs.png" alt="GAME TITLE cover" class="game-card__image" />
+          <div class="game-card__body">
+            <p class="game-card__desc">Worked mostly as a programming producer and level designer and programmer. Designed rooms and levels for the player
+              to clear through whilst providing a difficult but reasonable challenge in the room design.
+            </p>
+          </div>
+        </a>
+
+        <!-- Note for myself 
+              Replace Itch_URL with the link to the game
+              Replace Image_URL with the image -->
+        <!-- Card #: Template Card 
+        <a href="ITCH_URL" class="game-card" target="_blank" rel="noopener noreferrer">
+          <span class="game-card__title">GAME TITLE</span>
+          <img src="IMAGE_URL" alt="GAME TITLE cover" class="game-card__image" />
+          <div class="game-card__body">
+            <p class="game-card__desc">GAME DESC</p>
+          </div>
+        </a>
+        -->
+
       </div>
     </section>
 
